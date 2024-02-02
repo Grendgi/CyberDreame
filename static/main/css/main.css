@@ -23,40 +23,73 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header */
 .header {
-  padding-top: 30px;
+  padding-top: 0;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+
+  background-color: black;
 }
 
-.header__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.pg {
+  padding-top: 10px;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+
+.w_pg {
+  font-size: 35px;
+
+  color: white;
+  text-shadow: 0 0 10px aqua;
+
+  padding-left: 70px;
+}
+
+.header__nav {
+  border-top: 2px solid darkred;
+  border-bottom: 1px solid darkred;
 }
 
 .header__logo {
-  font-size: 30px;
+  padding-top: 110px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5em;
   font-weight: 700;
   color: #fff;
-  background: linear-gradient(to right, rgba(25,22,30,1) 0%, rgba(0,0,0,0) 85%);
+  text-transform: uppercase;
+  text-shadow:
+    0 0 5px #c8c8c8,
+    0 0 10px #c8c8c8,
+    0 0 20px #c8c8c8,
+    0 0 40px #ff00de,
+    0 0 80px #ff00de,
+    0 0 90px #ff00de,
+    0 0 100px #ff00de,
+    0 0 150px #ff00de;
 }
+
 
 .header__container {
     width: 100%;
 }
 
-.nav__block {
-  background: linear-gradient(to left, rgba(25,22,30,1) 0%, rgba(0,0,0,0) 85%);
-}
-
 /* Nav */
-.nav {
-  font-size: 14px;
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
   text-transform: uppercase;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .nav__link {
@@ -64,21 +97,23 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: top;
   margin: 0 15px;
   position: relative;
-  color: #fff;
+  color: #e56880;
   text-decoration: none;
   transition: color .1s linear;
+
+  padding-right: 30px;
 }
 
 .nav__link:hover {
-  color: #794b93;
+  color: #b500c5;
 }
 
-.nav__link:hover:after, .nav__link.active:after {
-  opacity: 1;
+.nav__link:first-child {
+  padding-left: 90px;
 }
 
-.nav__link.active {
-  color: #794b93;
+.nav__link:last-child {
+  padding-right: 90px;
 }
 
 /* Container */
@@ -97,6 +132,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   min-height: 820px;
   position: relative;
-  background: url("../img/baner.png") center no-repeat;
+  background: url("../img/Baner5.webp") center no-repeat;
   background-size: cover;
 }

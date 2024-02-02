@@ -4,24 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eec8b01c-04f3-45a9-8478-8173fbe09342" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/CyberDreame.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CyberDreame/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CyberDreame/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CyberDreame/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CyberDreame/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CyberDreame/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/main/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/main/img/Baner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/main/main.html" afterDir="false" />
+    <list default="true" id="eec8b01c-04f3-45a9-8478-8173fbe09342" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/static/main/img/Baner3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main/img/Baner4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main/img/Baner5.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/main/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/layout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +30,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 0
@@ -117,11 +108,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1706893909688</updated>
-      <workItem from="1706893920727" duration="7368000" />
+      <workItem from="1706893920727" duration="20333000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <option name="closed" value="true" />
+      <created>1706902138143</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1706902138143</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <option name="closed" value="true" />
+      <created>1706902142665</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706902142665</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
