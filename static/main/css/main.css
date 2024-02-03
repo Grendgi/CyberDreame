@@ -207,7 +207,8 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 .nav__link:hover {
-  color: #ff00dd;
+  color: #fca0a0;
+  text-shadow: 0 0 2px #fca0a0;
 }
 
 .nav__left {
@@ -235,4 +236,74 @@ input[type="search"]::-webkit-search-cancel-button {
   position: relative;
   background: url("../img/Baner5.webp") center no-repeat;
   background-size: cover;
+
+  margin-top: 20px;
+}
+
+/* Info block */
+
+.info-block {
+  background-color: #000; /* Черный фон */
+  padding: 20px;
+  border-radius: 10px; /* Скругление углов */
+
+  position: absolute; /* Для позиционирования псевдоэлементов */
+  width: 375px;
+  top: 730px;
+  z-index: 1;
+
+  overflow: hidden; /* Обрезка содержимого за пределами границ блока */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-block h1 {
+  font-size: 1.5em; /* Размер шрифта для заголовка */
+  text-transform: uppercase; /* Все буквы заглавные */
+  color: #0070d9;
+  padding-left: 15px;
+}
+
+.info-block2 {
+  background: repeating-radial-gradient(rgba(0, 0, 0, 1) 55.88%, rgba(0, 0, 0, 0)); /* Черный фон */
+  padding: 20px;
+  border: 2px solid rgba(28, 28, 28, 0.66);
+  box-shadow: 0 0 10px #1e1d1d, 0 0 20px rgba(0, 0, 0, 0.49), 0 0 30px rgba(0, 0, 0, 0.35); /* Неоновое свечение */
+  border-radius: 10px; /* Скругление углов */
+
+  position: absolute; /* Для позиционирования псевдоэлементов */
+  top: 728px;
+  width: 410px;
+  height: 112px;
+
+  overflow: hidden; /* Обрезка содержимого за пределами границ блока */
+}
+
+
+/* Social */
+.social {
+  display: flex;
+  justify-content: space-around;
+
+  padding-top: 10px;
+}
+
+.social__item {
+  padding: 0 15px;
+  font-size: 30px;
+  text-decoration: none;
+
+  color: #FF2D55;
+  line-height: 1;
+  transition: background .1s linear, color .1s linear;
+}
+
+.social__item:last-child {
+  border-right: 0;
+}
+
+.social__item:hover {
+  color: #fff;
 }
