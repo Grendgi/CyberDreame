@@ -14,13 +14,31 @@
 <header class="header">
     
     <div class="pg">
+        <div class="emblema"></div>
+        
         <div class="w_pg">
             Home
+            
+            <div class="nav_url">
+                {% if user.is_authenticated %}
+                    <a class="nav__url" href="#">Profile</a>
+                    <a class="nav__url" href="#">Forum</a>
+                {% else %}
+                    <a class="nav__url" href="#">Login</a>
+                    <a class="nav__url" href="#">Registration</a>
+                {% endif %}
+                
+            </div>
         </div>
         
-        <nav class="">
-            
-        </nav>
+        
+        <div class="search_box">
+            <input type="text" class="search_input" placeholder="Введите запрос...">
+            <button class="search_button" type="submit">
+                <span class="search_icon">x</span>
+            </button>
+        </div>
+        
     </div>
     
     <div class="header__nav">

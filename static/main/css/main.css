@@ -35,9 +35,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   padding-top: 10px;
   text-transform: uppercase;
   padding-bottom: 15px;
+}
+
+.nav__url {
+
 }
 
 .w_pg {
@@ -47,9 +55,103 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 0 10px aqua;
 
   padding-left: 70px;
+
+  display: flex;
+  align-items: center;
+}
+
+.nav_url {
+  font-size: 18px;
+  padding-left: 50px;
+}
+
+.nav__url {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 15px;
+  position: relative;
+  text-decoration: none;
+  transition: color .1s linear;
+
+  padding-right: 30px;
+  color: #0070d9;
+  z-index: 100;
+
+}
+
+.nav__url:hover {
+  color: aqua;
+}
+
+.nav__url:last-child {
+  padding-left: 15px;
+}
+
+.emblema {
+  position: absolute;
+  top: 0;
+
+  background: url("../img/emblema2.webp") center no-repeat;
+  width: 100%;
+  height: 54%;
+  background-size: contain;
+}
+
+.nav__pg {
+  z-index: 100;
+}
+
+.search_box {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 2px solid #FF2D55; /* Или другой цвет в соответствии с вашим дизайном */
+  border-radius: 30px;
+  padding: 5px 20px;
+
+  width: 444px;
+  height: 40px;
+  z-index: 100;
+}
+
+.search_input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white; /* Цвет текста, который вам нужен */
+  outline: none;
+  font-size: 16px; /* Или другой размер в соответствии с вашим дизайном */
+}
+
+.search_button {
+  background: transparent;
+  border: none;
+  color: #FF2D55; /* Или другой цвет в соответствии с вашим дизайном */
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search_icon {
+  font-size: 24px; /* Размер крестика */
+}
+
+/* Скрытие стрелки у input[type="search"] в браузерах, которые её показывают */
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+/* Дополнительные стили для фокуса на input */
+.search_input:focus {
+  border-color: #FF2D55;
 }
 
 .header__nav {
+  display: flex;
+  justify-content: center;
+
   border-top: 2px solid darkred;
   border-bottom: 1px solid darkred;
 }
@@ -58,7 +160,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 110px;
   position: absolute;
   top: 0;
-  width: 100%;
   text-align: center;
   font-size: 2.5em;
   font-weight: 700;
@@ -86,6 +187,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
 
+  width: 100%;
   text-transform: uppercase;
 
   padding-top: 20px;
@@ -108,12 +210,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #b500c5;
 }
 
-.nav__link:first-child {
-  padding-left: 90px;
+.nav__left {
+  padding-left: 80px;
 }
-
-.nav__link:last-child {
-  padding-right: 90px;
+.nav__right {
+  padding-right: 20px;
 }
 
 /* Container */
