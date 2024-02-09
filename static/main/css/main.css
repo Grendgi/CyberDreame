@@ -3,7 +3,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   line-height: 1.6;
-  color: #73717f;
+  color: #333;
 }
 
 *,
@@ -14,6 +14,25 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Section */
+.section {
+  padding: 80px 0;
+  background-color: black;
+}
+
+.transition-section {
+  padding: 80px 0;
+  background: linear-gradient(color(display-p3 0.0078 0.051 0.1216), #000000 88.66%);
 }
 
 /* Page */
@@ -31,6 +50,11 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1000;
 
   background-color: black;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
 }
 
 .pg {
@@ -201,8 +225,6 @@ input[type="search"]::-webkit-search-cancel-button {
   text-decoration: none;
   transition: color .1s linear;
 
-  padding-right: 30px;
-
   font-size: 15px;
 }
 
@@ -215,16 +237,92 @@ input[type="search"]::-webkit-search-cancel-button {
   padding-left: 80px;
 }
 .nav__right {
-  padding-right: 20px;
+  padding-right: 50px;
 }
 
-/* Container */
-.container {
-  width: 100%;
-  max-width: 1230px;
-  padding: 0 15px;
-  margin: 0 auto;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Стили для ссылок внутри выпадающего меню */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+/* nav section */
+
+.navigation {
+  background-color: #000; /* Черный фон для всей навигационной панели */
+  text-align: center; /* Выравнивание всех элементов по центру */
+
+  position: relative;
+  z-index: 2;
+
+  border-top: 2px solid darkcyan;
+  border-bottom: 1px solid darkred;
+}
+
+.nav-conteiner {
+  padding: 15px 200px; /* Отступы вокруг навигационного контейнера */
+}
+
+.navigation-panel {
+  background-color: #000; /* Темный фон для навигационной панели */
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cont {
+  display: inline-block; /* Отображение ссылок в ряд */
+  margin: 0 10px; /* Отступы между ссылками */
+  padding: 10px 20px; /* Отступы внутри ссылок */
+  color: #3f92f6; /* Цвет текста */
+  text-decoration: none; /* Убрать подчеркивание текста */
+  font-size: 16px; /* Размер шрифта */
+  font-weight: bold; /* Жирное начертание текста */
+  border-radius: 5px; /* Скругление углов ссылок */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Плавная анимация для фона и преобразований */
+}
+
+.cont:hover {
+  transform: translateY(-5px); /* Поднимает ссылку вверх при наведении */
+  color: color(srgb 0.3238 0.926 0.4723);
+
+  text-shadow: 2px 0px 0px rgba(43, 226, 223, 0.39);
+}
+
+/* Отдельные стили для активного раздела, если он у вас будет */
+.cont.active {
+  color: indianred;
+  text-shadow: 2px 0px 0px rgba(43, 226, 223, 0.39);
+}
+
+
+/* Intro */
 
 .intro {
   display: flex;
@@ -237,7 +335,7 @@ input[type="search"]::-webkit-search-cancel-button {
   background: url("../img/Baner5.webp") center no-repeat;
   background-size: cover;
 
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
 /* Info block */
@@ -249,7 +347,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
   position: absolute; /* Для позиционирования псевдоэлементов */
   width: 375px;
-  top: 730px;
+  top: 738px;
   z-index: 1;
 
   overflow: hidden; /* Обрезка содержимого за пределами границ блока */
@@ -274,7 +372,7 @@ input[type="search"]::-webkit-search-cancel-button {
   border-radius: 10px; /* Скругление углов */
 
   position: absolute; /* Для позиционирования псевдоэлементов */
-  top: 728px;
+  top: 736px;
   width: 410px;
   height: 112px;
 
@@ -307,3 +405,549 @@ input[type="search"]::-webkit-search-cancel-button {
 .social__item:hover {
   color: #fff;
 }
+
+/* News */
+
+.latest-news {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+
+.news-content-radius {
+  /* Закругляем углы только справа: сверху и снизу */
+  border-top-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  overflow: hidden; /* Обеспечиваем скрытие границ внутреннего элемента */
+}
+
+.news-content {
+  padding: 20px 40px 25px 0;
+
+  border-top: 1px solid transparent;
+  border-right: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: none;
+
+  /* Устанавливаем градиент для границы */
+  border-image: linear-gradient(
+          to right,
+          rgba(0, 112, 217, 0.2),
+          rgba(0, 112, 217, 0.3),
+          rgba(0, 112, 217, 0.3),
+          rgba(0, 112, 217, 0.5),
+          rgba(0, 112, 217, 0.6),
+          rgba(0, 255, 255, 0.6),
+          rgba(255, 45, 85, 0.7)
+          ) 1;
+
+  border-image-slice: 1;
+}
+
+.news-tag {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  padding: 10px 10px 10px 55px;
+}
+
+.soc-news-tag, .new-news-tag {
+  color: darkred;
+  font-size: 15px;
+
+  background: rgba(0, 0, 0, 0.67);
+
+  margin-bottom: 0;
+}
+
+.social-news, .new-news, .new-news-fl {
+  position: relative;
+  margin: 10px;
+}
+
+.news-content-text {
+  width: 95%;
+  position: absolute;
+  top: 90px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5px 5px 30px 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 84px;
+}
+
+.soc-news-title, .new-news-title {
+  color: #FF2D55;
+  font-size: 25px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* Ограничение текста двумя строками */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0; /* Убираем стандартные отступы заголовка */
+  line-height: 1.2; /* Улучшение читабельности при переносе текста */
+  padding: 5px;
+  box-sizing: border-box; /* Включаем padding в общий размер элемента */
+}
+
+.news-png {
+  max-width: 270px;
+  max-height: 250px;
+
+  padding-left: 40px;
+
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* Slider */
+
+.slider {
+  position: relative;
+  justify-content: space-between;
+  height: 310px;
+  width: 100%;
+  max-width: 1100px; /* Или на 100% ширины родительского элемента */
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides .slide {
+  display: none; /* Скрыть все слайды */
+  width: 100%;
+  /* Добавьте стили для слайдов */
+}
+
+.slides .slide img {
+  width: 100%;
+  display: block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px; /* Положите их по центру вертикально */
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0; /* Скругление для кнопок */
+  user-select: none; /* Предотвратить выделение текста */
+  text-decoration: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Information block */
+
+.information-block {
+  background: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон */
+  color: #ffffff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.information-block h2 {
+  text-align: center;
+  color: #FF2D55; /* Яркий акцентный цвет */
+}
+
+.information-block p {
+  font-size: 1rem; /* Размер шрифта для абзацев */
+  line-height: 1.6; /* Межстрочный интервал */
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.learn-more-btn {
+  display: block;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: color(srgb 0.1422 0.2418 0.3125);
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: rgba(63, 153, 169, 1); /* Светлый оттенок при наведении */
+  color: white;
+}
+
+
+/* popular forum list */
+
+.popular-topics {
+  background: #0a0a0a; /* Темный фон для секции */
+  padding: 20px;
+  margin: 20px 0;
+  color: #fff; /* Светлый текст на темном фоне */
+  border-radius: 5px; /* Немного скругленные углы */
+}
+
+.popular-topics h2 {
+  text-align: center; /* Заголовок по центру */
+  margin-bottom: 15px; /* Отступ заголовка от списка */
+}
+
+.popular-topics ul {
+  list-style: none; /* Убрать стандартные маркеры списка */
+  padding: 0; /* Убрать отступы у списка */
+}
+
+.popular-topics li {
+  border-bottom: 1px solid #222; /* Границы между темами */
+  padding: 10px; /* Отступы внутри каждого элемента списка */
+  transition: background-color 0.3s ease; /* Плавное изменение фона при наведении */
+}
+
+.popular-topics li:hover {
+  background-color: #1a1a1a; /* Изменение фона при наведении */
+}
+
+
+/* Personal recommendations */
+
+.personal-recommendations {
+  color: #ffffff;
+  padding: 20px;
+  background: rgba(10, 10, 10, 0.85); /* Темный фон для секции */
+  border-radius: 8px;
+  margin: 35px 0;
+}
+
+.personal-recommendations h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.recommendations-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Центрировать содержимое */
+}
+
+.recommendation-item {
+  margin: 10px;
+  padding: 10px;
+  width: 200px; /* или % в зависимости от желаемого размера */
+  background: #121212;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.recommendation-item:hover {
+  transform: scale(1.05); /* Небольшое увеличение при наведении */
+}
+
+/* Стили для изображения, заголовка и описания каждой рекомендации */
+.recommendation-item img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.recommendation-item h3 {
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.recommendation-item p {
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+/*  */
+
+.publications-section {
+  padding: 20px;
+  /*background: #333; !* Темный фон *!*/
+}
+
+.publications-section h2 {
+  color: deeppink;
+  color: color(srgb 0.8543 0.1012 0.6897);
+  text-shadow: 2px 2px 0 gray;
+
+  margin-bottom: 20px;
+}
+
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.publication {
+  background: floralwhite; /* Серо-синий фон для карточек */
+  color: #CCCCCC; /* Светло-серый текст */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  border: 1px solid limegreen;
+}
+
+.publication img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.publication h3 {
+  margin: 10px 0;
+  color: deeppink;
+
+  text-shadow: 2px 0px 0px darkred;
+}
+
+.publication p {
+  font-size: 14px;
+  color: black;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tag {
+  display: inline-block;
+  color: grey;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.tag:hover {
+  color: darkred;
+}
+
+.read-more {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Для акцентных элементов, которые должны выделяться */
+.accent {
+  color: #00FF00; /* Ярко-зеленый */
+  /* Остальные стили */
+}
+
+
+/*  */
+
+.blogs-section {
+  padding: 20px;
+  color: #c5c6c7; /* Цвет текста */
+}
+
+.blog-category {
+  margin-bottom: 40px;
+}
+
+.blog-category h2 {
+  color: #39ff14; /* Неоновый зеленый цвет для заголовков категорий */
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #39ff14; /* Добавление свечения к тексту */
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивные колонки */
+  gap: 20px;
+}
+
+.blog-post {
+  background: #112233; /* Темно-синий фон для постов */
+  border: 1px solid #222; /* Рамка вокруг постов */
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-post:hover {
+  transform: translateY(-10px); /* Эффект поднятия при наведении */
+  border-color: #39ff14; /* Изменение цвета границы при наведении */
+}
+
+.blog-post img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.blog-post h3 {
+  color: #00ffff; /* Цвет заголовков постов */
+  margin: 10px 0;
+}
+
+.blog-post p {
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.read-more {
+  color: #ff2e2e; /* Цвет ссылок */
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: auto; /* Поместить ссылку внизу карточки */
+}
+
+.read-more:hover {
+  text-decoration: underline;
+  color: #ff4242;
+}
+
+
+/*  */
+
+.games-section {
+  padding: 20px;
+  color: #c5c6c7; /* Цвет текста */
+}
+
+.games-section h2 {
+  color: #39ff14; /* Неоновый зеленый цвет для заголовков */
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  text-shadow: 0 0 5px #39ff14; /* Добавление свечения к тексту */
+}
+
+.games-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.game {
+  background: #112233; /* Темно-синий фон для блока с игрой */
+  color: #c5c6c7; /* Цвет текста */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex; /* Горизонтальное расположение элементов */
+  align-items: center; /* Центрирование элементов по вертикали */
+}
+
+.game img {
+  max-width: 200px; /* Фиксированная ширина изображения */
+  border-radius: 5px;
+  margin-right: 15px; /* Отступ справа от изображения */
+}
+
+.game-info {
+  flex-grow: 1; /* Занимает оставшееся пространство */
+}
+
+.game-info h3 {
+  color: #00ffff; /* Цвет заголовка игры */
+  margin-bottom: 10px;
+}
+
+.game-info p {
+  color: #cccccc; /* Цвет описания игры */
+  font-size: 1em; /* Размер шрифта описания */
+  margin-bottom: 10px;
+}
+
+.user-rating {
+  font-weight: bold;
+  font-size: 1.2em; /* Размер шрифта оценки */
+  color: #ff2e2e; /* Цвет оценки */
+}
+
+.user-rating span {
+  color: #ffff00; /* Цвет числовой оценки */
+}
+
+
+/*  */
+
+.gallery-section {
+  padding: 20px;
+  color: #fff;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  color: #21c7a8; /* Цвет заголовка галереи */
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Автоматическое распределение по ширине */
+  gap: 15px;
+}
+
+.gallery-item {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: hidden; /* Обрезать изображение по границам контейнера */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out; /* Плавное увеличение изображения */
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+
+/*  */
+
+.about-section {
+  padding: 50px 0; /* Отступы для секции */
+  color: #ffffff; /* Белый цвет текста */
+}
+
+.about-section .container {
+  max-width: 1200px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Центровка контейнера */
+  padding: 0 15px; /* Отступы внутри контейнера */
+}
+
+.about-section h2 {
+  font-size: 2.5em; /* Размер заголовка */
+  margin-bottom: 20px; /* Отступ после заголовка */
+  color: #ff2d55; /* Яркий акцентный цвет для заголовка */
+}
+
+.about-section p {
+  font-size: 1.1em; /* Размер текста параграфа */
+  line-height: 1.6; /* Межстрочный интервал */
+  margin-bottom: 20px; /* Отступ после параграфов */
+}
+
+
+

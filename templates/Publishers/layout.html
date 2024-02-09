@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+        <!-- Bootstrap / Fontawesome-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+        <script src="https://kit.fontawesome.com/fe4e64fd99.js" crossorigin="anonymous"></script>
+
+    <title>{% block title %}{% endblock %}</title>
+
+        <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'Publishers/css/Publishers.css' %}">
+
+</head>
+<body>
+
+<header class="header">
+    
+    <div class="pg">
+        <div class="emblema"></div>
+        
+        <div class="w_pg">
+            <div class="wh__pg">CDR</div>
+            
+            <div class="nav_url">
+                {% if user.is_authenticated %}
+                    <a class="nav__url" href="#">Profile</a>
+                    <a class="nav__url" href="#">Forum</a>
+                {% else %}
+                    <a class="nav__url" href="#">Login</a>
+                    <a class="nav__url" href="#">Registration</a>
+                {% endif %}
+                
+            </div>
+        </div>
+        
+        
+        <div class="search_box">
+            <input type="text" class="search_input" placeholder="Введите запрос...">
+            <button class="search_button" type="submit">
+                <span class="search_icon">x</span>
+            </button>
+        </div>
+        
+    </div>
+    
+    <div class="header__nav">
+        <div class="nav__container">
+            <nav class="nav__left">
+                <a class="nav__link" href="{% url 'main' %}"> CDR </a>
+                <a class="nav__link" href="#"> Публикации </a>
+                <a class="nav__link" href="#"> База Игр </a>
+            </nav>
+            <nav class="nav__right">
+                <a class="nav__link" href="#"> Галлерея </a>
+                <a class="nav__link" href="#"> Мерч </a>
+                <a class="nav__link" href="#"> О нас </a>
+            </nav>
+        </div>
+    </div>
+    
+</header>
+
+  {% block content %}
+
+  {% endblock %}
+
+
+<script src="{% static 'main/js/app.js' %}"></script>
+
+</body>
+</html>

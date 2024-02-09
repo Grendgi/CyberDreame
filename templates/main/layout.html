@@ -14,17 +14,22 @@
     <title>{% block title %}{% endblock %}</title>
 
         <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'Publishers/css/Publishers.css' %}">
 
 </head>
 <body>
 
+{% if not is_homepage %}
+<header class="header sticky-header">
+{% else %}
 <header class="header">
+{% endif %}
     
     <div class="pg">
         <div class="emblema"></div>
         
         <div class="w_pg">
-            <div class="wh__pg">HOME</div>
+            <div class="wh__pg">CDR</div>
             
             <div class="nav_url">
                 {% if user.is_authenticated %}
@@ -51,17 +56,56 @@
     <div class="header__nav">
         <div class="nav__container">
             <nav class="nav__left">
-                <a class="nav__link" href="#"> Home </a>
-                <a class="nav__link" href="#"> News </a>
-                <a class="nav__link" href="#"> Guides </a>
+                <a class="nav__link" href="{% url 'main' %}"> CDR </a>
+                <div class="nav__link dropdown">
+                    <a class="nav__link" href="{% url 'Publishers' %}">Публикации</a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'news' %}">Новости</a>
+                        <a href="#">Обзоры</a>
+                        <a href="#">Итоги</a>
+                        <a href="#">Инструментарий</a>
+                        <a href="#">Статьи</a>
+                        <!-- добавьте другие ссылки -->
+                    </div>
+                </div>
+                <div class="nav__link dropdown">
+                    <a class="nav__link" href="#">База Игр</a>
+                    <div class="dropdown-content">
+                        <a href="#">Игры</a>
+                        <a href="#">Компании</a>
+                        <!-- добавьте другие ссылки -->
+                    </div>
+                </div>
             </nav>
             <nav class="nav__right">
-                <a class="nav__link" href="#"> Pictures </a>
-                <a class="nav__link" href="#"> About </a>
-                <a class="nav__link" href="#"> Contact </a>
+                <div class="nav__link dropdown">
+                    <a class="nav__link" href="#">Галлерея</a>
+                    <div class="dropdown-content">
+                        <a href="#">Новости</a>
+                        <a href="#">Обзоры</a>
+                        <a href="#">Итоги</a>
+                        <a href="#">Инструментарий</a>
+                        <a href="#">Статьи</a>
+                        <!-- добавьте другие ссылки -->
+                    </div>
+                </div>
+                <div class="nav__link dropdown">
+                    <a class="nav__link" href="#">Мерч</a>
+                    <div class="dropdown-content">
+                        <a href="#">Новости</a>
+                        <a href="#">Обзоры</a>
+                        <a href="#">Итоги</a>
+                        <a href="#">Инструментарий</a>
+                        <a href="#">Статьи</a>
+                        <!-- добавьте другие ссылки -->
+                    </div>
+                </div>
+                <a class="nav__link" href="#"> О нас </a>
             </nav>
         </div>
-        <div class="header__logo">Добро пожаловать в мир<br> Cyber Dream</div>
+        {% if is_homepage %}
+            <div class="header__logo">Добро пожаловать в мир<br> Cyber Dream</div>
+        {% endif %}
     </div>
     
 </header>
@@ -69,6 +113,10 @@
   {% block content %}
 
   {% endblock %}
+
+
+<script src="{% static 'main/js/app.js' %}"></script>
+<script src="{% static 'Publishers/js/app.js' %}"></script>
 
 </body>
 </html>
