@@ -1,0 +1,176 @@
+{% extends 'main/layout.html' %}
+
+
+{% load static %}
+
+
+
+{% block title %}Cyber Dreame{% endblock %}
+
+
+
+{% block content %}
+
+<div class="page page-news-detail">
+
+    <div class="container container_news_detail">
+        <main class="news-article">
+            <aside class="sidebar random-news" style="position: fixed; top: 204px;">
+                <h2>Random News</h2>
+                    <div class="random-news-list">
+                        {% for news in random_news %}
+                        <article class="random-news-item" style="margin: 0; margin-bottom: 10px;">
+                            {% if news.images.all %}
+                            <img src="{{ news.images.all.0.image.url }}" alt="{{ news.title }}">
+                            {% endif %}
+                            <div class="random-news-content">
+                                <h3>{{ news.title }}</h3>
+                                <a href="{% url 'page_news_detail' news.id %}" class="read-more">Read more</a>
+                            </div>
+                        </article>
+                        {% endfor %}
+                    </div>
+            </aside>
+            <div style="width: 800px; margin-left: 300px;">
+            
+                <article>
+                    <div class="page_news">
+                        <div class="news_header">
+                            <div class="news_header_title">
+                                <h1 class="news_title">{{ news.title }}</h1>
+                            </div>
+                            <div class="news_header_subtitle">
+                                <div class="pub_date">
+                                    <p>Опубликован: {{ news.date_posted }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news_detail_content">
+                            <!-- Display the first news image -->
+                            {% if news.images.all %}
+                                <div class="news_img" style="margin: auto 50px; display: flex; justify-content: center;">
+                                    <img src="{{ news.images.all.0.image.url }}" alt="{{ news.title }}" width="600" height="300">
+                                </div>
+                            {% endif %}
+                            <div class="news_text" style="margin: 30px 15px;">
+                                <p>{{ news.content }}</p>
+                            </div>
+                            
+                            <div>
+                                <!-- Slider for images -->
+                                <div class="custom-slider image-slider">
+                                  <div class="custom-slides">
+                                    {% for image in news.images.all|slice:"1:" %}
+                                      <div class="slide" id="image-slide-{{ forloop.counter }}" style="display: flex; justify-content: center;">
+                                        <img src="{{ image.image.url }}" alt="{{ news.title }}" style="width: 500px; height: 300px;">
+                                      </div>
+                                    {% endfor %}
+                                  </div>
+                                  <a class="custom-prev" onclick="changeSlide('image-slider', -1)">&#10094;</a>
+                                  <a class="custom-next" onclick="changeSlide('image-slider', 1)">&#10095;</a>
+                                </div>
+                            </div>
+                        
+                            <div style="margin-top: 30px;">
+                            <!-- Slider for videos -->
+                                <div class="custom-slider video-slider">
+                                  <div class="custom-slides">
+                                    {% for video in news.videos.all %}
+                                      <div class="slide" id="video-slide-{{ forloop.counter }}" style="display: flex; justify-content: center;">
+                                        <video controls>
+                                          <source src="{{ video.video.url }}" type="video/mp4">
+                                          Ваш браузер не поддерживает видео.
+                                        </video>
+                                      </div>
+                                    {% endfor %}
+                                  </div>
+                                  <a class="custom-prev" onclick="changeSlide('video-slider', -1)">&#10094;</a>
+                                  <a class="custom-next" onclick="changeSlide('video-slider', 1)">&#10095;</a>
+                                </div>
+                            </div>
+                        
+                            <div>
+                                <!-- Display all the news files -->
+                                {% for file in news.files.all %}
+                                    <div class="news_files">
+                                        <a href="{{ file.file.url }}" class="file-link">{{ file.file.name }}</a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            
+                        </div>
+                        <div class="news_category" style="margin-top: 20px;">
+                                <a href="{% url 'page_news_category' news.category.id %}" style="text-decoration: none"><p>Категория: {{ news.category.name }}</p></a>
+                        </div>
+
+                    </div>
+                </article>
+                
+                <section class="comments-section">
+                    {% if user.is_authenticated %}
+                        
+                    <form class="comment-form" id="commentForm">
+                        {% csrf_token %}
+                        <div id="textEditor" contenteditable="true" class="text-editor"></div>
+                        <div class="toolbar">
+                            <div>
+                                <button type="button" id="boldButton" class="tool-button"><b>B</b></button>
+                                <button type="button" id="italicButton" class="tool-button"><i>I</i></button>
+                            </div>
+                            
+                            <button type="submit" id="submitComment">Post Comment</button>
+                        </div>
+                    
+                    </form>
+                        
+                    {% endif %}
+                    <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                        <h2>Comments: <span id="comments-count">{{ comments|length }}</span></h2>
+                        <div class="comment-sorting" style="display: flex">
+                            <label for="sortComments">Sort by:</label>
+                            <select id="sortComments">
+                                <option value="newest">новые</option>
+                                <option value="oldest">старые</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="comment-list">
+                        {% for comment in comments %}
+                            <article class="comment" data-time="{{ comment.created_at|date:"U" }}">
+                                <!-- Добавьте аватар пользователя, если он есть -->
+                                <div class="comment-avatar">
+                                    <img src="{% if comment.author.avatar %}{{ comment.author.avatar.url }}{% else %}path_to_default_avatar{% endif %}" alt="Avatar">
+                                </div>
+                                <div class="comment-body">
+                                    <header class="comment-header">
+                                        <h3 class="comment-author">{{ comment.author.username }}</h3>
+                                        <time class="comment-time">{{ comment.created_at }}</time>
+                                    </header>
+                                    <p class="comment-content">{{ comment.content|safe }}</p>
+                                    <!-- Добавьте кнопки голосования, если они есть -->
+{#                                    <div class="comment-votes">#}
+{#                                        <button class="vote-up">▲</button>#}
+{#                                        <span class="votes-count">0</span> <!-- Динамически обновите это число -->#}
+{#                                        <button class="vote-down">▼</button>#}
+{#                                    </div>#}
+                                </div>
+                            </article>
+                        {% endfor %}
+                    </div>
+                </section>
+
+            </div>
+            
+        </main>
+    </div>
+
+</div>
+
+<script>
+
+    
+
+</script>
+    
+    
+{% endblock %}

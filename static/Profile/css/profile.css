@@ -1,0 +1,237 @@
+.section-profile {
+    background: #333333;
+    padding: 80px 0;
+    min-height: 880px;
+}
+
+.profile-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile-avatar img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.profile-name {
+    margin: 0;
+    font-size: 24px;
+    color: #000;
+}
+
+.profile-dates p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.date {
+    font-weight: bold;
+    color: #333;
+}
+
+.profile_btn {
+    background-color: #555;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 16px;
+    max-height: 40px;
+    margin: 10px;
+}
+
+.profile_btn:hover {
+    background-color: #666;
+}
+
+.profile-main {
+    display: flex;
+}
+
+.profile-about {
+    background-color: #fff;
+    padding: 20px;
+    margin-right: 20px;
+    flex: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-about {
+    /* Дополнительные стили для блока "О себе" */
+}
+
+/* Удалите margin-right у последнего элемента в .profile-main */
+.profile-main > div:last-child {
+    margin-left: 20px;
+}
+
+.profile-games-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    max-width: 300px;
+}
+
+.profile-games-section h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.game-profiles p {
+    margin: 5px 0;
+    color: #666;
+}
+
+
+/**/
+
+.edit-profile-section {
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.form-avatar,
+.form-email,
+.form-password,
+.form-profile-data,
+.game-profiles-management {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"],
+button {
+    background-color: #5c5c5c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #6e6e6e;
+}
+
+.game-profile-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.game-profile-item span {
+    flex-grow: 1;
+}
+
+/* Основные стили, которые вы уже определили */
+/* ... */
+
+/* Стилизация раздела редактирования профиля */
+.edit-profile-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px; /* Добавляем скругление углов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Добавляем тень для выделения блока */
+}
+
+/* Стилизация форм и элементов ввода */
+.form-avatar label,
+.form-email label,
+.form-password label,
+.form-profile-data label {
+    font-weight: bold; /* Сделаем текст меток полужирным */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+input[type="file"] { /* Стилизуем поля для загрузки файла так же, как и другие поля ввода */
+    border-radius: 4px; /* Скругляем углы полей */
+    line-height: 1.5; /* Увеличиваем межстрочный интервал */
+}
+
+/* Стилизация кнопок */
+input[type="submit"],
+button[type="button"] { /* Указываем тип button для стилизации */
+    background-color: #007bff; /* Используем синий цвет для кнопок */
+    color: white;
+    border-radius: 4px; /* Скругляем углы */
+    transition: background-color 0.3s ease; /* Добавляем плавное изменение цвета при наведении */
+}
+
+input[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: #0056b3; /* Темный оттенок синего при наведении */
+}
+
+/* Стилизация кнопок для удаления профилей */
+.game-profile-item button {
+    background-color: #ff4d4d; /* Красный цвет для кнопок удаления */
+    margin-left: 10px; /* Добавляем немного пространства слева от кнопки */
+    border-radius: 50%; /* Делаем кнопки круглыми */
+    width: 30px; /* Фиксированная ширина */
+    height: 30px; /* Фиксированная высота */
+}
+
+.game-profile-item button:hover {
+    background-color: #ff0000; /* Ярко-красный при наведении */
+}
+
+/* Стилизация кнопок подписки и удаления профиля */
+.subscribe-notifications,
+.delete-profile {
+    background-color: #28a745; /* Зеленый цвет для кнопки подписки */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.delete-profile {
+    background-color: #dc3545; /* Красный цвет для кнопки удаления профиля */
+}
+
+.delete-profile:hover {
+    background-color: #c82333; /* Более темный оттенок красного при наведении */
+}
+
+/* Определяем стили для визуального разделения форм */
+.email-password {
+    border-bottom: 1px solid #eee; /* Добавляем горизонтальную линию между формами */
+    padding-bottom: 20px; /* Отступ снизу */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+

@@ -1,0 +1,108 @@
+.page-create-news {
+    background-color: #333333;
+}
+
+.editor-container {
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        padding: 20px 20px 240px 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        background: white;
+        margin-top: 20px;
+}
+
+.editor-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.editor-block {
+    margin-bottom: 10px;
+}
+
+.editor-block label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.editor-block input[type="text"],
+.editor-block textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.editor-block textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.editor-block button {
+    padding: 10px 20px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    margin-right: 0;
+}
+
+.editor-block button:hover {
+    background-color: darkcyan;
+}
+
+.action-buttons {
+    text-align: right;
+}
+
+
+/**/
+
+.menu-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.menu-button {
+    position: absolute;
+    right: 0;
+    top: 50%; /* Adjust as necessary */
+    /* Additional styles for your button */
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.menu-content .button {
+    padding: 10px;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    color: darkred;
+
+}
+
+.menu-content .button:last-child {
+  border-bottom: none;
+}
+
+.menu-content .button i {
+  margin-right: 5px;
+}
+
+.menu-container:hover .menu-content {
+  display: block;
+}

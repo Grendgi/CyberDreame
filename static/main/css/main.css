@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Container */
 .container {
   width: 100%;
-  max-width: 1230px;
+  /*max-width: 1230px;*/
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -510,7 +510,7 @@ input[type="search"]::-webkit-search-cancel-button {
   height: 310px;
   width: 100%;
   max-width: 1100px; /* Или на 100% ширины родительского элемента */
-  margin: auto;
+  margin: 25px auto;
   overflow: hidden;
 }
 
@@ -549,6 +549,15 @@ input[type="search"]::-webkit-search-cancel-button {
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
+
+.slider .slides .slide {
+  display: none;
+}
+
+.slider .slides .slide:first-child {
+  display: block;
+}
+
 
 /* Information block */
 
@@ -699,6 +708,8 @@ input[type="search"]::-webkit-search-cancel-button {
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
   border: 1px solid limegreen;
+
+  position: relative;
 }
 
 .publication img {
@@ -950,4 +961,26 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 
+/**/
+
+.news-button {
+    display: block; /* Занимает всю ширину родительского элемента */
+    margin: 20px auto; /* Центрирование */
+    padding: 10px 25px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    text-align: center; /* Выравнивание текста по центру */
+    color: #000; /* Цвет текста */
+    background-color: #fff; /* Белый фон */
+    border: 2px solid #000; /* Черная рамка */
+    border-radius: 25px; /* Скругление углов */
+    text-decoration: none; /* Убрать подчеркивание */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход цветов */
+}
+
+.news-button:hover, .news-button:focus {
+    color: #fff; /* Белый цвет текста при наведении */
+    background-color: #777777; /* Черный фон при наведении */
+    text-decoration: none; /* Убрать подчеркивание */
+}
 

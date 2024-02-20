@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="registrationModal" class="modal">
+    <div class="modal-content">
+        <h2>Регистрация</h2>
+        <form id="registrationForm" method="post" action="{% url 'register' %}">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Логин" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password1" placeholder="Пароль" required>
+            <input type="password" name="password2" placeholder="Подтвердите пароль" required>
+            <input type="submit" value="Зарегистрироваться">
+{#            <div class="social-registration">#}
+{#                <button class="google-registration">Регистрация через Google</button>#}
+{#                <button class="yandex-registration">Регистрация через Yandex</button>#}
+{#                <button class="vk-registration">Регистрация через VK</button>#}
+{#            </div>#}
+        </form>
+        <div class="option-link">
+            <a href="#" id="showLogin">Уже есть аккаунт? Войти</a>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'Profile/js/app.js' %}"></script>
+
+</body>
+</html>

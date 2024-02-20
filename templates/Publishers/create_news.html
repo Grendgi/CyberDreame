@@ -1,0 +1,71 @@
+{% extends 'main/layout.html' %}
+
+
+{% load static %}
+
+
+
+{% block title %}Cyber Dreame{% endblock %}
+
+
+
+{% block content %}
+    
+    <!-- В create_news.html -->
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    <div class="page page-create-news">
+    
+        <div style="max-height: 5000px; min-height: 800px;">
+    
+            <div class="editor-container">
+                <div style="display: flex; justify-content: space-between;">
+                    <div class="editor-header">Create a New Post</div>
+                    <div class="category">
+                        {{ form.category }}
+                    </div>
+                    <div class="category">
+                        {{ form.author }}
+                    </div>
+                </div>
+    
+    
+                <div class="editor-block">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+    
+                <div class="editor-blocks">
+                    
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.content }}
+                        <div class="image-upload">
+                            <label for="newsImages">Загрузите изображения:</label>
+                            <input type="file" id="newsImages" name="images" multiple>
+                        </div>
+                        <div class="video-upload">
+                            <label for="NewsVideo">Загрузите видео:</label>
+                            <input type="file" id="NewsVideo" name="video" multiple>
+                        </div>
+                        <div class="file-upload">
+                            <label for="NewsFile">Загрузите файлов:</label>
+                            <input type="file" id="NewsFile" name="file" multiple>
+                        </div>
+                    </form>
+
+                    
+                </div> <!-- Container for inserted blocks -->
+    
+                <div class="action-buttons">
+                    <button type="submit"><input type="submit" value="Создать новость"></button>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</form>
+
+    
+{% endblock %}

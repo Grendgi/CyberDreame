@@ -1,0 +1,419 @@
+.page-news-detail {
+    background-color: #333333;
+}
+
+.container_news_detail {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/**/
+
+.sidebar.random-news {
+    width: 300px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.random-news h2 {
+    margin-bottom: 20px;
+}
+
+.random-news-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.random-news-item img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.random-news-item .random-news-content {
+    flex-grow: 1;
+}
+
+.random-news-item h3 {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+}
+
+.random-news-item p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.random-news-item .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #0056b3;
+}
+
+.random-news-item .read-more:hover {
+    text-decoration: underline;
+}
+
+
+/**/
+
+.news-article {
+    flex: 3;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.news-article article {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+
+    border: 1px solid;
+    box-shadow: 0 0 2px black;
+}
+
+.news-article h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.news-article p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.comments {
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.comments h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+}
+
+.sidebar .random-news-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .random-news-list > *:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+
+/**/
+/* Base styles */
+.comments-section,
+.comment-form textarea,
+.text-editor,
+.comment {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Section styling */
+.comments-section {
+  margin: 20px auto;
+  background-color: #f8f8f8;
+  max-width: 800px;
+}
+
+/* Comment list styling */
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+/* Comment styling */
+.comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Avatar styling */
+.comment-avatar {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.comment-avatar img,
+.tool-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Comment body styling */
+.comment-body {
+  flex-grow: 1;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+/* Author and time styling */
+.comment-author {
+  font-weight: bold;
+}
+
+.comment-time {
+  font-size: 0.8em;
+  color: #777;
+}
+
+/* Content and votes styling */
+.comment-content {
+  margin-top: 10px;
+}
+
+.comment-votes {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Button styling */
+.vote-up, .vote-down,
+.tool-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1.2em;
+  color: black;
+}
+
+.vote-up:hover {
+  color: limegreen;
+}
+
+.vote-down:hover {
+  color: darkred;
+}
+
+.votes-count {
+  font-size: 1em;
+}
+
+/* Form styling */
+.comment-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.comment-form button,
+#submitComment {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.comment-form button:hover,
+#submitComment:hover {
+  background-color: #0056b3;
+}
+
+/* Toolbar styling */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* Submit button styling */
+#submitComment {
+  background-color: #ff4500;
+  border-radius: 50px;
+}
+
+#submitComment:hover {
+  background-color: #e03d00;
+}
+
+/* Tool button styling */
+.tool-button {
+  background-color: #f1f1f1;
+  margin: 0 5px;
+}
+
+.tool-button.active {
+  background-color: #555;
+  color: white;
+}
+
+.comment-sorting {
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+.comment-sorting label {
+    margin-right: 5px;
+}
+
+.comment-sorting select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+/**/
+
+.news_content {
+    /* Добавляем внешний отступ для всего блока контента */
+    margin: 0 auto;
+    max-width: 1200px; /* Максимальная ширина блока контента */
+}
+
+.news_img, .news_video, .news_files {
+    margin: 15px; /* Внешний отступ для элементов сетки */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Тень для элементов */
+    transition: transform 0.2s; /* Анимация для наведения */
+}
+
+.news_img:hover, .news_video:hover, .news_files:hover {
+    transform: scale(1.05); /* Увеличиваем элемент при наведении */
+}
+
+/* Стили для сетки с изображениями */
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Адаптивные колонки */
+    grid-gap: 10px; /* Расстояние между элементами сетки */
+}
+
+/* Стили для блока с видео */
+.news_video {
+    width: 100%; /* Ширина блока под размер контейнера */
+    height: auto; /* Высота видео будет автоматически рассчитана */
+    overflow: hidden; /* Обрезаем всё что выходит за пределы блока */
+}
+
+.news_video video {
+    width: 100%; /* Ширина видео на весь блок */
+    height: auto; /* Высота видео будет автоматически рассчитана */
+}
+
+/* Стили для блока с файлами */
+.news_files {
+    background: #f8f9fa; /* Цвет фона для блока с файлами */
+    padding: 10px; /* Внутренний отступ */
+    border-radius: 5px; /* Скругление углов */
+}
+
+.news_files a {
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color: #333; /* Цвет текста */
+    transition: color 0.2s; /* Анимация изменения цвета */
+}
+
+.news_files a:hover {
+    color: #dc3545; /* Цвет текста при наведении */
+}
+
+
+/**/
+
+.custom-slider {
+    position: relative;
+    max-width: 600px; /* Или установите 100%, если хотите, чтобы слайдер растягивался на всю ширину родителя */
+    margin: auto;
+    overflow: hidden;
+}
+
+.custom-slides .custom-slide {
+    display: none;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+}
+
+.custom-slides .custom-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.custom-slide video {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+video {
+    height: 300px;
+    width: 600px;
+}
+
+.custom-prev, .custom-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.custom-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.custom-prev {
+    left: 0;
+}
+
+.custom-prev:hover, .custom-next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.custom-slide video {
+    width: 100%; /* Ширина видео по ширине контейнера */
+    height: auto; /* Высота будет рассчитана автоматически */
+}

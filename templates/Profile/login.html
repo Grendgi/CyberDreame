@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <h2>Войти в аккаунт</h2>
+        <form id="loginForm" method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <input type="text" placeholder="Логин или Email" required name="username">
+            <input type="password" placeholder="Пароль" required name="password">
+            <input type="submit" value="Войти">
+            <div class="option-link">
+{#                <a href="#" id="forgotPasswordLink">Забыли пароль??</a>#}
+            </div>
+{#            <div class="social-login">#}
+{#                <button class="google-login">Войти через Google</button>#}
+{#                <button class="yandex-login">Войти через Yandex</button>#}
+{#                <button class="vk-login">Войти через VK</button>#}
+{#            </div>#}
+        </form>
+        <div class="option-link">
+            <a href="#" id="showRegistration">Зарегистрироваться</a>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'Profile/js/app.js' %}"></script>
+
+</body>
+</html>

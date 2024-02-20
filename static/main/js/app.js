@@ -1,82 +1,42 @@
 // Slider
+// Инициализация индексов для всех слайдеров
+// Объединенный объект индексов для всех слайдеров
+let slideIndexes = { 'slider': 1, 'image-slider': 1, 'video-slider': 1 };
 
-let slideIndex = 1;
-showSlides(slideIndex);
+// Универсальная функция для смены слайдов
+function changeSlide(sliderClass, n) {
+  let slides = document.querySelectorAll(`.${sliderClass} .slide`);
+  if (!slides.length) return; // Выходим, если нет слайдов
 
-function changeSlide(n) {
-  showSlides(slideIndex += n);
+  slideIndexes[sliderClass] += n;
+  if (slideIndexes[sliderClass] > slides.length) { slideIndexes[sliderClass] = 1; }
+  if (slideIndexes[sliderClass] < 1) { slideIndexes[sliderClass] = slides.length; }
+
+  slides.forEach(slide => slide.style.display = "none");
+  slides[slideIndexes[sliderClass] - 1].style.display = "flex"; // Или "block", в зависимости от нужного стиля
 }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("slide");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
+// Универсальная функция для отображения слайдов
+function showSlides(sliderClass, n) {
+  let slides = document.querySelectorAll(`.${sliderClass} .slide`);
+  if (!slides.length) return; // Выходим, если нет слайдов
+
+  slides.forEach(slide => slide.style.display = "none");
+  slides[n - 1].style.display = "flex"; // Или "block", в зависимости от нужного стиля
 }
 
-
-
-// popular forum list
-
+// Обработчик загрузки документа для инициализации всех слайдеров
 document.addEventListener('DOMContentLoaded', function() {
-  fetchPopularTopics();
+  // Инициализация всех слайдеров
+  Object.keys(slideIndexes).forEach(sliderClass => {
+    showSlides(sliderClass, slideIndexes[sliderClass]);
+  });
 });
 
-function fetchPopularTopics() {
-  // Здесь должен быть запрос к вашему API форума для получения популярных тем
-  // Это пример кода, вам нужно будет использовать реальный URL и логику обработки ответа
-  fetch('/api/popular-topics?period=week')
-    .then(response => response.json())
-    .then(data => {
-      const topicsList = document.getElementById('popular-topics-list');
-      topicsList.innerHTML = ''; // Очистить список, если там уже что-то есть
-      data.forEach(topic => {
-        const listItem = document.createElement('li');
-        listItem.textContent = topic.title; // Предполагается, что у темы есть заголовок
-        // Добавьте другие элементы в listItem, если нужно
-        topicsList.appendChild(listItem);
-      });
-    })
-    .catch(error => console.error('Ошибка при получении популярных тем:', error));
-}
 
 
-// Personal recommendations
 
-document.addEventListener('DOMContentLoaded', function() {
-  fetchPersonalRecommendations();
-});
 
-function fetchPersonalRecommendations() {
-  // Пример функции запроса к API для получения рекомендаций
-  // Замените '/api/recommendations' на реальный URL вашего API
-  fetch('/api/recommendations')
-    .then(response => response.json())
-    .then(recommendations => {
-      const container = document.querySelector('.recommendations-container');
-      container.innerHTML = ''; // Очистить текущие рекомендации
-      recommendations.forEach(rec => {
-        const item = createRecommendationItem(rec);
-        container.appendChild(item);
-      });
-    })
-    .catch(error => console.error('Ошибка при получении рекомендаций:', error));
-}
-
-function createRecommendationItem(rec) {
-  const item = document.createElement('div');
-  item.className = 'recommendation-item';
-  item.innerHTML = `
-    <img src="${rec.image}" alt="${rec.title}">
-    <h3>${rec.title}</h3>
-    <p>${rec.description}</p>
-  `;
-  return item;
-}
 
 
 // Dynamic content
@@ -115,4 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Активируем первый раздел CDR по умолчанию
   document.querySelector('.navigation-panel .cont[data-section="section1"]').click();
 });
+
+
+//
+
+
+
+
+
+
 

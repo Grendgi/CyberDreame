@@ -10,469 +10,129 @@
 
 
 {% block content %}
-    
+
 <div class="page page-news" >
 
-    <div class="container" style="margin: 80px 0; display: flex;">
-        
+    <div class="container" style="display: flex;">
+
         <div class="category-sidebar">
             <div style="display: grid; position: fixed;">
                 <div class="all-news-link">
                     <a href="{% url 'page_all_news' %}">Все новости</a>
                 </div>
+            
                 <div class="category-list">
-                    <li><a href="#news">Новости</a></li>
-                    <li><a href="#reviews">Обзоры</a></li>
-                    <li><a href="#results">Итоги</a></li>
-                    <li><a href="#toolkit">Инструментарий</a></li>
-                    <li><a href="#article">Статьи</a></li>
+                    {% for category in categories %}
+                        <li><a href="#{{ category.name}}">{{ category.name }}</a></li>
+                    {% endfor %}
                 </div>
+
             </div>
         </div>
-        
-        <div class="publishers" style="margin-left: 165px;">
-            
-            <section class="news anchor-offset" id="news">
-                <h1 class="heading">Новости</h1>
-                <main class="articles">
-                    <!-- Category: News -->
-                    <section id="news">
-                      <!-- Основной контейнер для всех новостей -->
-                        <div class="news-container">
-                            <!-- Large news item with image and overlay -->
-                            <div class="news-item large-news-item">
-                                <img src="/static/Publishers/img/XI104H2rOlc.png" alt="News Title">
-                                <div class="overlay">
-                                    <h2>News Title fsenfkannfj efnkamnfjbhifjn afbnkmnfj akjvz knfnsbk njfkfbja jbahfnjsnfks bknjafbksbgf g ajfskbfgkanfj ksfbjsgksfgkan ksdfnksnr afbjahjkfnjvsbj bfaknf nhvb akfnam fjh afnbhakn </h2>
-                                    <div class="overlay-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                              
-                            <!-- News item with image above text -->
-                            <div class="news-item">
-                                <img src="/static/Publishers/img/LNDsfhqldrv9c4LBnugXIQ.png" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Titlejfanjfa iafjkanjkf jsnfjsfkmk sjkgnskgbj afnskfnaknf fnkafnk</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-item">
-                                <img src="path-to-image.jpg" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Single-column news item with just text -->
-                            <div class="news-item single-column-news-item">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title fsnfkanfbjn akfnbjksnafjv kanrfkanf kaf afnkffakn </h2>
-                                    <p>Extended news description... fadfnksnfk fsknf ksngksn kgnsk bnksng l knskgns knk gnks nk nksgn ksg nk s kngsknskgnkskdsdnfka k ksgnkwgnkfknbkwkf qbfaknfkjank afbknjfkesan</p>
-                                    <div class="category-tags" style="bottom: -280px;">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-item single-column-news-item">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <p>Extended news description...</p>
-                                    <div class="category-tags" style="bottom: -280px;">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- News item with image above text -->
-                            <div class="news-item">
-                                <img src="path-to-image.jpg" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                
-                            </div>
-                              
-                            
-                              
-                              <!-- Add more news items as needed -->
-                        </div>
-                        
-                    </section>
-                </main>
-                
-            </section>
-            
-            <section class="reviews anchor-offset" id="reviews">
-                <h1 class="heading">Обзоры</h1>
-                <main class="articles">
-                    <!-- Category: Reviews -->
-                    <section id="reviews">
-                      <!-- Основной контейнер для всех новостей -->
-                        <div class="news-container">
-                            <!-- Large news item with image and overlay -->
-                            <div class="news-item large-news-item">
-                                <img src="/static/Publishers/img/XI104H2rOlc.png" alt="News Title">
-                                <div class="overlay">
-                                    <h2>News Title fsenfkannfj efnkamnfjbhifjn afbnkmnfj akjvz knfnsbk njfkfbja jbahfnjsnfks bknjafbksbgf g ajfskbfgkanfj ksfbjsgksfgkan ksdfnksnr afbjahjkfnjvsbj bfaknf nhvb akfnam fjh afnbhakn </h2>
-                                    <div class="overlay-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                              
-                            <!-- News item with image above text -->
-                            <div class="news-item">
-                                <img src="/static/Publishers/img/LNDsfhqldrv9c4LBnugXIQ.png" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Titlejfanjfa iafjkanjkf jsnfjsfkmk sjkgnskgbj afnskfnaknf fnkafnk</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-item">
-                                <img src="path-to-image.jpg" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Single-column news item with just text -->
-                            <div class="news-item single-column-news-item">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title fsnfkanfbjn akfnbjksnafjv kanrfkanf kaf afnkffakn </h2>
-                                    <p>Extended news description... fadfnksnfk fsknf ksngksn kgnsk bnksng l knskgns knk gnks nk nksgn ksg nk s kngsknskgnkskdsdnfka k ksgnkwgnkfknbkwkf qbfaknfkjank afbknjfkesan</p>
-                                    <div class="category-tags" style="bottom: -280px;">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-item single-column-news-item">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <p>Extended news description...</p>
-                                    <div class="category-tags" style="bottom: -280px;">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- News item with image above text -->
-                            <div class="news-item">
-                                <img src="path-to-image.jpg" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                
-                            </div>
-                              
-                            
-                              
-                              <!-- Add more news items as needed -->
-                        </div>
-                        
-                    </section>
-                </main>
-            </section>
-            
-            <section class="results anchor-offset" id="results">
-                <h1 class="heading">Итоги</h1>
-                <main class="articles">
-                    <!-- Category: Reviews -->
-                    <section id="reviews">
-                      <!-- Основной контейнер для всех новостей -->
-                        <div class="news-container">
-                            <!-- Large news item with image and overlay -->
-                            <div class="news-item large-news-item">
-                                <img src="/static/Publishers/img/XI104H2rOlc.png" alt="News Title">
-                                <div class="overlay">
-                                    <h2>News Title fsenfkannfj efnkamnfjbhifjn afbnkmnfj akjvz knfnsbk njfkfbja jbahfnjsnfks bknjafbksbgf g ajfskbfgkanfj ksfbjsgksfgkan ksdfnksnr afbjahjkfnjvsbj bfaknf nhvb akfnam fjh afnbhakn </h2>
-                                    <div class="overlay-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                              
-                            <!-- News item with image above text -->
-                            <div class="news-item">
-                                <img src="/static/Publishers/img/LNDsfhqldrv9c4LBnugXIQ.png" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Titlejfanjfa iafjkanjkf jsnfjsfkmk sjkgnskgbj afnskfnaknf fnkafnk</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-item">
-                                <img src="path-to-image.jpg" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Single-column news item with just text -->
-                            <div class="news-item single-column-news-item">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title fsnfkanfbjn akfnbjksnafjv kanrfkanf kaf afnkffakn </h2>
-                                    <p>Extended news description... fadfnksnfk fsknf ksngksn kgnsk bnksng l knskgns knk gnks nk nksgn ksg nk s kngsknskgnkskdsdnfka k ksgnkwgnkfknbkwkf qbfaknfkjank afbknjfkesan</p>
-                                    <div class="category-tags" style="bottom: -280px;">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-item single-column-news-item">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <p>Extended news description...</p>
-                                    <div class="category-tags" style="bottom: -280px;">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- News item with image above text -->
-                            <div class="news-item">
-                                <img src="path-to-image.jpg" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                
-                            </div>
-                              
-                            
-                              
-                              <!-- Add more news items as needed -->
-                        </div>
-                        
-                    </section>
-                </main>
-            </section>
-            
-            <section class="toolkit anchor-offset" id="toolkit">
-                <h1 class="heading">Инструментарий</h1>
-                <main class="articles">
-                    <!-- Category: Reviews -->
-                    <section id="reviews">
-                      <!-- Основной контейнер для всех новостей -->
-                        <div class="news-container">
-                            <!-- Large news item with image and overlay -->
-                            <div class="news-item large-news-item">
-                                <img src="/static/Publishers/img/XI104H2rOlc.png" alt="News Title">
-                                <div class="overlay">
-                                    <h2>News Title fsenfkannfj efnkamnfjbhifjn afbnkmnfj akjvz knfnsbk njfkfbja jbahfnjsnfks bknjafbksbgf g ajfskbfgkanfj ksfbjsgksfgkan ksdfnksnr afbjahjkfnjvsbj bfaknf nhvb akfnam fjh afnbhakn </h2>
-                                    <div class="overlay-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                              
-                            <!-- News item with image above text -->
-                            <div class="news-item">
-                                <img src="/static/Publishers/img/LNDsfhqldrv9c4LBnugXIQ.png" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Titlejfanjfa iafjkanjkf jsnfjsfkmk sjkgnskgbj afnskfnaknf fnkafnk</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-item">
-                                <img src="path-to-image.jpg" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Single-column news item with just text -->
-                            <div class="news-item single-column-news-item">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title fsnfkanfbjn akfnbjksnafjv kanrfkanf kaf afnkffakn </h2>
-                                    <p>Extended news description... fadfnksnfk fsknf ksngksn kgnsk bnksng l knskgns knk gnks nk nksgn ksg nk s kngsknskgnkskdsdnfka k ksgnkwgnkfknbkwkf qbfaknfkjank afbknjfkesan</p>
-                                    <div class="category-tags" style="bottom: -280px;">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-item single-column-news-item">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <p>Extended news description...</p>
-                                    <div class="category-tags" style="bottom: -280px;">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- News item with image above text -->
-                            <div class="news-item">
-                                <img src="path-to-image.jpg" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                
-                            </div>
-                              
-                            
-                              
-                              <!-- Add more news items as needed -->
-                        </div>
-                        
-                    </section>
-                </main>
-            </section>
-            
-            <section class="article anchor-offset" id="article">
-                <h1 class="heading">Статьи</h1>
-                <main class="articles">
-                    <!-- Category: Reviews -->
-                    <section id="reviews">
-                      <!-- Основной контейнер для всех новостей -->
-                        <div class="news-container">
-                            <!-- Large news item with image and overlay -->
-                            <div class="news-item large-news-item">
-                                <img src="/static/Publishers/img/XI104H2rOlc.png" alt="News Title">
-                                <div class="overlay">
-                                    <h2>News Title fsenfkannfj efnkamnfjbhifjn afbnkmnfj akjvz knfnsbk njfkfbja jbahfnjsnfks bknjafbksbgf g ajfskbfgkanfj ksfbjsgksfgkan ksdfnksnr afbjahjkfnjvsbj bfaknf nhvb akfnam fjh afnbhakn </h2>
-                                    <div class="overlay-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                              
-                            <!-- News item with image above text -->
-                            <div class="news-item">
-                                <img src="/static/Publishers/img/LNDsfhqldrv9c4LBnugXIQ.png" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Titlejfanjfa iafjkanjkf jsnfjsfkmk sjkgnskgbj afnskfnaknf fnkafnk</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-item">
-                                <img src="path-to-image.jpg" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Single-column news item with just text -->
-                            <div class="news-item single-column-news-item">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title fsnfkanfbjn akfnbjksnafjv kanrfkanf kaf afnkffakn </h2>
-                                    <p>Extended news description... fadfnksnfk fsknf ksngksn kgnsk bnksng l knskgns knk gnks nk nksgn ksg nk s kngsknskgnkskdsdnfka k ksgnkwgnkfknbkwkf qbfaknfkjank afbknjfkesan</p>
-                                    <div class="category-tags" style="bottom: -280px;">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="news-item single-column-news-item">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <p>Extended news description...</p>
-                                    <div class="category-tags" style="bottom: -280px;">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- News item with image above text -->
-                            <div class="news-item">
-                                <img src="path-to-image.jpg" alt="News Title">
-                                <div class="content-news">
-                                    <h2 class="title-news">News Title</h2>
-                                    <div class="category-tags">
-                                        <span class="tags">Tag1</span>
-                                        <span class="tags">Tag2</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                
-                            </div>
-                              
-                            
-                              
-                              <!-- Add more news items as needed -->
-                        </div>
-                        
-                    </section>
-                </main>
-            </section>
-            
-        </div>
-        
-    </div>
 
-    
+        <div class="publishers" style="margin-left: 165px;">
+            <!-- Итерация по категориям -->
+            {% for category_name, news in categories_news.items %}
+            <section class="anchor-offset" id="{{ category_name }}">
+                <h1 class="heading">{{ category_name }}</h1>
+                <main class="articles">
+                    <div class="news-container">
+                    {% with total_news=0 %}
+                        <!-- Большая карточка новости -->
+                        {% for news_item in news.large_news %}
+                            {% with total_news=total_news|add:1 %}
+                            <div class="news-item large-news-item">
+                                {% if news_item.images.all %}
+                                    <a href="{% url 'page_news_detail' news_id=news_item.id %}">
+                                        <img src="{{ news_item.images.all.0.image.url }}" alt="{{ news_item.title }}">
+                                    </a>
+                                {% else %}
+                                    <!-- Заглушка или альтернативный текст, если изображение отсутствует -->
+                                    <a href="{% url 'page_news_detail' news_id=news_item.id %}">
+                                        <img src="http://placehold.it/500x300" alt="No image available">
+                                    </a>
+                                {% endif %}
+                                <div class="overlay">
+                                    <a href="{% url 'page_news_detail' news_id=news_item.id %}" style="text-decoration: none;">
+                                        <h2>{{ news_item.title }}</h2>
+                                    </a>
+                                    <div class="overlay-tags">
+                                        <span class="tags">{{ news_item.category.name }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endwith %}
+                    {% empty %}
+                        <div class="news-item">
+                            <p>НОВОСТЕЙ НЕТУ</p>
+                        </div>
+                    {% endfor %}
+
+                        <!-- Стандартные карточки новостей -->
+                        {% for news_item in news.standard_news %}
+                            {% with total_news=total_news|add:1 %}
+                            <div class="news-item">
+                                {% if news_item.images.all %}
+                                    <a href="{% url 'page_news_detail' news_id=news_item.id %}">
+                                        <img src="{{ news_item.images.all.0.image.url }}" alt="{{ news_item.title }}">
+                                    </a>
+                                {% else %}
+                                    <!-- Заглушка или альтернативный текст, если изображение отсутствует -->
+                                    <a href="{% url 'page_news_detail' news_id=news_item.id %}">
+                                        <img src="http://placehold.it/500x300" alt="No image available">
+                                    </a>
+                                {% endif %}
+                                <div class="content-news">
+                                    <a href="{% url 'page_news_detail' news_id=news_item.id %}"  style="text-decoration: none;">
+                                        <h2>{{ news_item.title }}</h2>
+                                    </a>
+                                    <div class="category-tags">
+                                    <span class="tags">{{ news_item.category.name }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endwith %}
+                    {% empty %}
+                        {% if total_news == 0 %}
+                        <div class="news-item">
+                            <p>НОВОСТЕЙ НЕТУ</p>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+
+                        <!-- Текстовые карточки новостей -->
+                        {% for news_item in news.text_news %}
+                            {% with total_news=total_news|add:1 %}
+                            <div class="news-item single-column-news-item">
+                                <div class="content-news">
+                                <a href="{% url 'page_news_detail' news_id=news_item.id %}" style="text-decoration: none;">
+                                    <h2>{{ news_item.title }}</h2>
+                                </a>
+                                <p>{{ news_item.content }}</p>
+                                    <div class="category-tags">
+                                        <span class="tags">{{ news_item.category.name }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endwith %}
+                    {% empty %}
+                        {% if total_news == 0 %}
+                        <div class="news-item">
+                            <p>НОВОСТЕЙ НЕТУ</p>
+                        </div>
+                        {% endif %}
+                    {% endfor %}
+
+                    {% endwith %}
+
+                    </div>
+                </main>
+            </section>
+            {% endfor %}
+
+        </div>
+
+    </div>
 
 </div>
 

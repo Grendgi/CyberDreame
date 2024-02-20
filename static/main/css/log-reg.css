@@ -1,0 +1,129 @@
+.modal {
+    display: none; /* Изначально модальное окно не отображается */
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+}
+
+.modal-content {
+    background-color: #1a1a1a; /* Темный фон для контента */
+    margin: 10% auto; /* Центрируем блок на странице */
+    padding: 20px;
+    border-radius: 10px; /* Скругление углов */
+    width: 90%;
+    max-width: 400px; /* Максимальная ширина */
+}
+
+.modal h2 {
+    color: #fff; /* Белый цвет текста */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal input[type="text"],
+.modal input[type="email"],
+.modal input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+    background-color: #333; /* Темный фон для input */
+    color: #fff; /* Белый цвет текста */
+}
+
+.modal input[type="submit"] {
+    width: 100%;
+    background-color: #4b8df8; /* Синий фон для кнопки отправки */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.modal input[type="submit"]:hover {
+    background-color: #3273dc; /* Темный оттенок синего для наведения */
+}
+
+.social-login button,
+.social-registration button {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.google-login,
+.google-registration { background-color: #db4437; }
+.yandex-login,
+.yandex-registration { background-color: #ffcc00; color: black; }
+.vk-login,
+.vk-registration { background-color: #4c75a3; }
+
+.social-login button:hover,
+.social-registration button:hover {
+    opacity: 0.8;
+}
+
+.option-link {
+    color: #4b8df8; /* Синий цвет для текста ссылки */
+    text-align: center;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.option-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Стиль для ссылки "Забыли пароль??" */
+#forgotPasswordLink {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #4b8df8;
+    cursor: pointer;
+}
+
+#forgotPasswordLink:hover {
+    text-decoration: underline;
+}
+
+/* Стили для модального окна "Забыли пароль?" */
+#forgotPasswordModal .modal-content {
+    /* Используйте те же стили, что и для других модальных окон */
+}
+
+#forgotPasswordModal input[type="email"] {
+    /* Используйте те же стили, что и для других полей ввода */
+}
+
+#forgotPasswordModal input[type="submit"] {
+    /* Используйте те же стили, что и для других кнопок отправки */
+}
+
+#backToLogin {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #4b8df8;
+    cursor: pointer;
+}
+
+#backToLogin:hover {
+    text-decoration: underline;
+}

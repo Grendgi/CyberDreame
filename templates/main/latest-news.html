@@ -1,0 +1,36 @@
+
+
+
+
+<div class="latest-news">
+    <!-- Итерация по двум последним новостям -->
+    {% for news in latest_news %}
+    <div class="social-news">
+        <div class="news-content-radius">
+            <div class="news-content">
+                {% if news.images.all %}
+                    <!-- Проверка наличия изображения у новости -->
+                    <a href="{% url 'page_news_detail' news_id=news.id %}">
+                        <img class="news-png" src="{{ news.images.all.0.image.url }}" alt="{{ news.title }}">
+                    </a>
+                {% else %}
+                    <a href="{% url 'page_news_detail' news_id=news.id %}">
+                        <img src="http://placehold.it/500x300" alt="No image available">
+                    </a>
+                {% endif %}
+                <div class="news-tag">
+                    <!-- Здесь можно добавить хэштеги, если они есть в модели -->
+                    <p class="soc-news-tag">{{ news.category.name }}</p>
+                </div>
+                <div class="news-content-text">
+                    <a href="{% url 'page_news_detail' news_id=news.id %}" style="text-decoration: none">
+                        <h1 class="soc-news-title">{{ news.title }}</h1>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+

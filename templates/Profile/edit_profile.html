@@ -1,0 +1,112 @@
+{% extends 'main/layout.html' %}
+
+
+{% load static %}
+
+
+
+{% block title %}Cyber Dreame{% endblock %}
+
+
+
+{% block content %}
+    
+    <div class="section-profile">
+    
+        <div class="page page-profile">
+            
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        {% if user.userprofile.avatar %}
+                            <img src="{{ user.userprofile.avatar.url }}" alt="Аватар пользователя">
+                        {% else %}
+                            <img src="{% static 'Profile/img/default-avatar.png' %}" alt="Аватар пользователя"> <!-- Укажите путь к изображению по умолчанию -->
+                        {% endif %}
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="profile-name">{{ user.username }}</h2>
+                        <div class="profile-dates">
+                            <p>Дата регистрации: <span class="date">{{ user.userprofile.date_of_registration|date:"d F Y" }}</span></p>
+                            <p>Последний визит: <span class="date">{{ user.userprofile.last_visit|date:"d F Y" }}</span></p>
+                        </div>
+                    </div>
+                    <button class="profile_btn edit-profile-btn">
+                        <a href="{% url 'Profile' %}">Профиль</a>
+                    </button>
+                </div>
+                
+                
+                <div class="edit-profile-section">
+                    <form class="form-avatar" method="post" action="{% url 'update_avatar' %}" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <label for="avatar">Аватар</label>
+                        <input type="file" id="avatar" name="avatar">
+                        <input type="submit" value="Загрузить">
+                    </form>
+                    
+                    <div class="email-password" style="display: flex; justify-content: space-evenly;">
+                        <form class="form-email" method="post" action="{% url 'update_email' %}">
+                            {% csrf_token %}
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" value="{{ user.email }}">
+                            <input type="password" id="current-password" name="current_password" placeholder="текущий пароль">
+                            <input type="submit" value="Сохранить">
+                        </form>
+                
+                        <form class="form-password" method="post" action="{% url 'update_password' %}">
+                            {% csrf_token %}
+                            <label for="new-password">Новый пароль</label>
+                            <input type="password" id="id_old_password" name="old_password" placeholder="текущий пароль" required>
+                            <input type="password" id="id_new_password1" name="new_password1" placeholder="новый пароль" required>
+                            <input type="password" id="id_new_password2" name="new_password2" placeholder="подтвердите новый пароль" required>
+                            <input type="submit" value="Сохранить">
+                        </form>
+                    </div>
+            
+                    <form id="form-profile-data" class="form-profile-data" method="post" action="{% url 'edit_profile' %}">
+                        {% csrf_token %}
+                        <label for="username">Имя пользователя</label>
+                        <input type="text" id="username" name="username" value="{{ user.username }}">
+
+                        <label for="about">О себе</label>
+                        <textarea id="about" name="about" style="height: 148px; display: block;">{{ user.userprofile.bio }}</textarea>
+
+                        <input type="submit" value="Сохранить">
+                    </form>
+            
+                    <div class="game-profiles-management">
+                        <h3>Профили и персонажи в играх и сервисах</h3>
+                        <div id="game-profiles-list">
+                            <!-- Список существующих игровых профилей будет заполнен здесь -->
+                            {% for profile in game_profiles %}
+                                <div class="game-profile-item" id="game-profile-{{ profile.id }}">
+                                    <span>{{ profile.game_name }}: {{ profile.character_name }}</span>
+                                    <!-- Кнопка удаления, отправляющая ID игрового профиля -->
+                                    <form action="{% url 'delete_game_profile' profile.id %}" method="post" style="display:inline;">
+                                        {% csrf_token %}
+                                        <button type="button" onclick="deleteGameProfile({{ profile.id }})">✖</button>
+                                    </form>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <form id="game-profile-form" method="post" data-action-url="{% url 'add_game_profile' %}">
+                            {% csrf_token %}
+                            <div style="display: flex;">
+                                <input type="text" name="game_name" placeholder="Игра или сервис" required>
+                                <input type="text" name="character_name" placeholder="Имя персонажа или ссылка на профиль" required>
+                            </div>
+                            <button type="submit">Добавить</button>
+                        </form>
+                    </div>
+
+            
+{#                    <button type="button" class="subscribe-notifications">Подписаться</button>#}
+{#                    <button type="button" class="delete-profile">Удалить профиль</button>#}
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'main/layout.html' %}
+
+
+{% load static %}
+
+
+
+{% block title %}Cyber Dreame{% endblock %}
+
+
+
+{% block content %}
+    
+    <div class="section-profile">
+    
+        <div class="page page-profile">
+            
+            <div class="profile-container">
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        {% if user.userprofile.avatar %}
+                            <img src="{{ user.userprofile.avatar.url }}" alt="Аватар пользователя">
+                        {% else %}
+                            <img src="{% static 'Profile/img/default-avatar.png' %}" alt="Аватар пользователя"> <!-- Укажите путь к изображению по умолчанию -->
+                        {% endif %}
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="profile-name">{{ user.username }}</h2>
+                        <div class="profile-dates">
+                            <p>Дата регистрации: <span class="date">{{ user.userprofile.date_of_registration|date:"d F Y" }}</span></p>
+                            <p>Последний визит: <span class="date">{{ user.userprofile.last_visit|date:"d F Y" }}</span></p>
+                        </div>
+                    </div>
+                    <div style="display: grid;justify-items: center;">
+                        <div class="profile_btn edit-profile-btn">
+                            <a href="{% url 'edit_profile' %}">изменить профиль</a>
+                        </div>
+                        <div class="profile_btn exit-profile-btn">
+                            <a href="{% url 'logout' %}">Выйти</a>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Дополнительные блоки под шапкой -->
+                <div class="profile-main">
+                    <div class="profile-games-section">
+                        <h3>Профили и персонажи в играх и сервисах</h3>
+                        <div class="game-profiles">
+                            {% for game_profile in game_profiles %}
+                                <p>{{ game_profile.game_name }}: {{ game_profile.character_name }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    
+                    <div class="profile-about">
+                        <h1 style="margin-left: 15px">О себе</h1>
+                        <div style="margin: 15px">
+                            <p>{{ user.userprofile.bio }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+{% endblock %}

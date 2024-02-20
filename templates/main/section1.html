@@ -1,27 +1,23 @@
 
             
             <div class="slider">
-              <div class="slides">
-                <div class="slide" id="slide-1">
-                    
-                    
-                    
+              <div class="slides" style="margin: auto">
+                {% for slide in slides %}
+                <div class="slide" id="slider-{{ forloop.counter }}"> <!-- Изменил id для соответствия с JavaScript -->
+                    <div style="display: grid; justify-items: center">
+                        <h2>{{ slide.title }}</h2>
+                        <p>{{ slide.content }}</p>
+                        {% if slide.image %}
+                        <img src="{{ slide.image.url }}" alt="{{ slide.title }}" style="width:1000px;height: 310px;margin: 0 50px;">
+                        {% endif %}
+                    </div>
                 </div>
-                <div class="slide" id="slide-2">
-                    
-                    
-                    
-                </div>
-                <div class="slide" id="slide-3">
-                    
-                    
-                    
-                </div>
-                <!-- Добавьте столько слайдов, сколько вам нужно -->
+                {% endfor %}
               </div>
-              <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-              <a class="next" onclick="changeSlide(1)">&#10095;</a>
+              <a class="prev" onclick="changeSlide('slider', -1)">❮</a>
+              <a class="next" onclick="changeSlide('slider', 1)">❯</a>
             </div>
+
             
             <div style="display: flex;">
                 
@@ -30,61 +26,23 @@
                   <p>Добро пожаловать в мир Cyber Dream, виртуальное пространство для любителей киберпанка и футуристических игр. Мы предлагаем последние новости, обзоры и обсуждения о всех ваших любимых играх. Присоединяйтесь к нашему сообществу и делитесь своим опытом и идеями!</p>
                   <a href="#" class="learn-more-btn">Узнать больше</a>
                     
-                    <section class="personal-recommendations">
-                      <h2>Ваши Рекомендации</h2>
-                      <div class="recommendations-container">
-                        <!-- Сюда будут вставлены рекомендации через JavaScript -->
-                      </div>
-                    </section>
+{#                    <section class="personal-recommendations">#}
+{#                      <h2>Ваши Рекомендации</h2>#}
+{#                      <div class="recommendations-container">#}
+{#                        <!-- Сюда будут вставлены рекомендации через JavaScript -->#}
+{#                      </div>#}
+{#                    </section>#}
 
                 </section>
                 
                 <div>
     
-                    <div class="latest-news">
-                        
-                        <div class="social-news">
-                            <div class="news-content-radius">
-                                <div class="news-content">
-                                    <a href="#">
-                                        <img class="news-png" src="static/main/img/XI104H2rOlc.png" alt="">
-                                    </a>
-                                    <div class="news-tag">
-                                        <p class="soc-news-tag">Хэштэги</p>
-                                    </div>
-                                    <div class="news-content-text">
-                                        <h1 class="soc-news-title">Глава Electronic Arts, Эндрю Уилсон, подтвердил, что новая часть Battlefield ожидается не раньше 2025 года.</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="new-news">
-                            <div class="news-content-radius">
-                                <div class="news-content">
-                                    <a href="#">
-                                        <img class="news-png" src="static/main/img/LNDsfhqldrv9c4LBnugXIQ.png" alt="">
-                                    </a>
-                                    <div class="news-tag">
-                                        <p class="new-news-tag">Хэштэги</p>
-                                    </div>
-                                    <div class="news-content-text">
-                                        <h1 class="new-news-title">Заголовок новости</h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
+                    {% include 'main/latest-news.html' %}
+
                     
                     <iframe src="https://calendar.google.com/calendar/embed?height=250&wkst=2&bgcolor=%234285F4&ctz=Europe%2FMoscow&showTz=0&showPrint=0&showTitle=0&showTabs=0&showCalendars=0&src=Y3liZXJkcmVhbWUwQGdtYWlsLmNvbQ&color=%23039BE5" style="border:solid 1px #777" width="250" height="250" frameborder="0" scrolling="no"></iframe>
                     
-                    <section class="popular-topics">
-                      <h2>Популярные Темы На Форуме</h2>
-                      <ul id="popular-topics-list">
-                        <!-- Темы форума будут добавлены здесь с помощью JavaScript -->
-                      </ul>
-                    </section>
+
                     
                 </div>
                 

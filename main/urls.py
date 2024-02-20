@@ -9,4 +9,5 @@ urlpatterns = [
     path('section4/', views.section4, name='section4'),
     path('section5/', views.section5, name='section5'),
     path('section6/', views.section6, name='section6'),
+    path('in_vork/', views.in_vork, name='in_vork'),
 ]
