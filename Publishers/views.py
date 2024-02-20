@@ -39,9 +39,11 @@ def all_news(request):
     news_list = News.objects.all().order_by('-date_posted')  # Сортировка новостей от новых к старым
     paginator = Paginator(news_list, 10)  # Показывать по 5 новостей на странице
 
+    categories = Category.objects.all()  # Получаем все категории из базы данных
+
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
-    return render(request, 'Publishers/page_all_news.html', {'page_obj': page_obj})
+    return render(request, 'Publishers/page_all_news.html', {'page_obj': page_obj, 'categories': categories})
 
 
 def news_by_category(request, category_id):

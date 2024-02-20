@@ -5,100 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eec8b01c-04f3-45a9-8478-8173fbe09342" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/Profile/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/Profile/css/profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/Profile/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/Publishers/css/create-news.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/Publishers/css/news-detail.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/main/css/log-reg.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Profile/edit_profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Profile/forgot_your_password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Profile/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Profile/password_recovery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Profile/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Profile/registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Publishers/create_news.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/Publishers/page_news_category.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip-23.3.2.dist-info/AUTHORS.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip-23.3.2.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip-23.3.2.dist-info/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip-23.3.2.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip-23.3.2.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip-23.3.2.dist-info/REQUESTED" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip-23.3.2.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip-23.3.2.dist-info/entry_points.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip-23.3.2.dist-info/top_level.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/cli/cmdoptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/cli/cmdoptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/cli/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/cli/parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/commands/cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/commands/cache.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/commands/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/commands/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/commands/debug.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/commands/debug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/commands/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/commands/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/commands/install.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/commands/install.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/configuration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/index/collector.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/index/collector.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/index/package_finder.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/index/package_finder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/index/sources.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/index/sources.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/locations/_distutils.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/locations/_distutils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/metadata/_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/metadata/_json.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/models/candidate.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/models/candidate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/models/direct_url.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/models/direct_url.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/models/format_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/models/format_control.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/models/link.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/models/link.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/network/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/network/download.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/network/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/network/session.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/network/xmlrpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/network/xmlrpc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/operations/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/operations/check.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/operations/install/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/operations/install/wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/operations/prepare.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/operations/prepare.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/pyproject.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/pyproject.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/req/constructors.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/req/constructors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/req/req_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/req/req_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/req/req_install.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/req/req_install.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/req/req_set.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/req/req_set.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/req/req_uninstall.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/req/req_uninstall.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/resolution/legacy/resolver.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/resolution/legacy/resolver.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/resolution/resolvelib/candidates.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/resolution/resolvelib/candidates.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/resolution/resolvelib/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/resolution/resolvelib/factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/resolution/resolvelib/requirements.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/resolution/resolvelib/requirements.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/utils/egg_link.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/utils/egg_link.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/utils/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/utils/misc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/utils/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/utils/wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/vcs/versioncontrol.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/vcs/versioncontrol.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/wheel_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_internal/wheel_builder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/compat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/locators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/manifest.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/manifest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/markers.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/markers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/metadata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/scripts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/version.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/distlib/wheel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/vendor.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.venv/lib/python3.9/site-packages/pip/_vendor/vendor.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CyberDreame/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/CyberDreame/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CyberDreame/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/CyberDreame/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Publishers/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Publishers/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Publishers/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Publishers/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Publishers/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Publishers/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Publishers/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Publishers/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Publishers/css/Publishers.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/Publishers/css/Publishers.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/Publishers/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/Publishers/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/main/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Publishers/Publishers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Publishers/Publishers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Publishers/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Publishers/page_news_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/Publishers/page_all_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Publishers/page_all_news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/main/section1.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/main/section1.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,26 +54,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.CyberDreame.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/ilya/PycharmProjects/CyberDreame/static/Publishers/img&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.CyberDreame.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/ilya/PycharmProjects/CyberDreame — site",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/Publishers/img" />
@@ -226,6 +133,7 @@
       <workItem from="1707324491462" duration="16653000" />
       <workItem from="1707388029692" duration="102721000" />
       <workItem from="1707612560658" duration="3738000" />
+      <workItem from="1708463020667" duration="704000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -323,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707520223570</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update">
+      <option name="closed" value="true" />
+      <created>1708463112781</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708463112781</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

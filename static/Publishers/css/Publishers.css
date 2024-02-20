@@ -7,12 +7,12 @@
 /**/
 
 .news-link, .all-news-link {
-    padding-bottom: 20px; /* or any suitable value */
+    padding-bottom: 0px; /* or any suitable value */
 }
 
  .news-link a, .all-news-link a {
   display: block;
-  padding: 10px 22px;
+  padding: 5px 22px;
   margin-top: 10px;
   background-color: #333;
   color: #fff;

@@ -21,21 +21,11 @@
                     <div class="all-news-link">
                         <a href="{% url 'page_all_news' %}">Все новости</a>
                     </div>
-                    <div class="news-link">
-                        <a href="{% url 'page_news_category' category_id=1 %}">Новости</a>
-                    </div>
-                    <div class="news-link">
-                        <a href="{% url 'page_news_category' category_id=2 %}">Обзоры</a>
-                    </div>
-                    <div class="news-link">
-                        <a href="{% url 'page_news_category' category_id=3 %}">Итоги</a>
-                    </div>
-                    <div class="news-link">
-                        <a href="{% url 'page_news_category' category_id=4 %}">Инструментарий</a>
-                    </div>
-                    <div class="news-link">
-                        <a href="{% url 'page_news_category' category_id=5 %}">Статьи</a>
-                    </div>
+                    {% for category in categories %}
+                        <div class="news-link">
+                            <a href="{% url 'page_news_category' category_id=category.id %}">{{ category.name }}</a>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
             
